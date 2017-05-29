@@ -85,7 +85,7 @@ func (p *Provider) Debug(debug bool) {
 // BeginAuth asks Twitter for an authentication end-point and a request token for a session.
 // Twitter does not support the "state" variable.
 func (p *Provider) BeginAuth(state string) (goth.Session, error) {
-	requestToken, url, err := p.consumer.GetRequestTokenAndUrl(p.CallbackURL)
+	requestToken, url, err := p.consumer.GetRequestTokenAndUrl(p.CallbackURL + "?state=" + state)
 	session := &Session{
 		AuthURL:      url,
 		RequestToken: requestToken,
