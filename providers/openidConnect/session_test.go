@@ -3,7 +3,7 @@ package openidConnect
 import (
 	"testing"
 	"github.com/stretchr/testify/assert"
-	"github.com/markbates/goth"
+	"github.com/highalpha/goth"
 )
 
 func Test_Implements_Session(t *testing.T) {

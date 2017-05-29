@@ -5,7 +5,7 @@ package meetup
 import (
 	"net/http"
 	"golang.org/x/oauth2"
-	"github.com/markbates/goth"
+	"github.com/highalpha/goth"
 	"io/ioutil"
 	"encoding/json"
 	"bytes"

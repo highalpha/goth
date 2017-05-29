@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/markbates/goth"
+	"github.com/highalpha/goth"
 	"golang.org/x/oauth2"
 	"fmt"
 	"crypto/hmac"
@@ -90,7 +90,7 @@ func (p *Provider) FetchUser(session goth.Session) (goth.User, error) {
 	}
 
 	// always add appsecretProof to make calls more protected
-	// https://github.com/markbates/goth/issues/96
+	// https://github.com/highalpha/goth/issues/96
 	// https://developers.facebook.com/docs/graph-api/securing-requests
 	hash := hmac.New(sha256.New, []byte(p.Secret))
 	hash.Write([]byte(sess.AccessToken))

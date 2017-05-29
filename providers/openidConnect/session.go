@@ -2,7 +2,7 @@ package openidConnect
 
 import (
 	"errors"
-	"github.com/markbates/goth"
+	"github.com/highalpha/goth"
 	"encoding/json"
 	"strings"
 	"time"

@@ -9,7 +9,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/markbates/goth"
+	"github.com/highalpha/goth"
 	"github.com/mrjones/oauth"
 	"golang.org/x/oauth2"
 	"fmt"
