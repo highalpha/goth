@@ -3,6 +3,7 @@ package onedrive
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"strings"
 	"time"
 
@@ -42,6 +43,7 @@ func (s *Session) Authorize(provider goth.Provider, params goth.Params) (string,
 	s.AccessToken = token.AccessToken
 	s.RefreshToken = token.RefreshToken
 	s.ExpiresAt = token.Expiry
+	fmt.Println("MICROSOFT AUTH: ", s.AccessToken, s.RefreshToken)
 	return token.AccessToken, err
 }
 
