@@ -167,7 +167,9 @@ var CompleteUserAuth = func(res http.ResponseWriter, req *http.Request) (goth.Us
 		return goth.User{}, err
 	}
 
-	err = storeInSession(providerName, sess.Marshal(), req, res)
+	if providerName != "microsoft" {
+		err = storeInSession(providerName, sess.Marshal(), req, res)
+	}
 
 	if err != nil {
 		return goth.User{}, err
